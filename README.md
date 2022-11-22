@@ -1,5 +1,5 @@
 # JS_1
-Основы программирования на JavaScript I
+## Основы программирования на JavaScript 1
 
 JavaScript — интерпретируемый, объектно-ориентированный язык программирования.
 Функция — это мини-программа, с помощью которой можно что-то сделать. 
@@ -210,3 +210,18 @@ console.log(myObj.test); // 0
 delete myObj.test;
 console.log(myObj.test); // undefined
 
+Оператор typeof
+Иногда непонятно, с каким типом мы сейчас работаем: Тип переменной распознает typeof.
+Его можно использовать двумя способами: как унарный оператор typeof x и как функцию typeof(x). Результатом будет строка, в которой будет указан тип:
+```js script
+console.log(typeof 12); // number
+console.log(typeof 1n) // bigint
+console.log(typeof "12"); // string
+console.log(typeof true); // boolean
+console.log(typeof Symbol()); // symbol
+console.log(typeof undefined); // undefined
+console.log(typeof {a: 1}); // object
+console.log(typeof alert);// function
+console.log(typeof null); // object
+```
+typeof null выводит object. Это официально признанная ошибка, допущенная при создании JavaScript.
